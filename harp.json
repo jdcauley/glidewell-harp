@@ -1,0 +1,8 @@
+{
+  "domains": [""],
+  "globals": {
+    "site_title": "LOFT",
+    "twitter": "@HarpPlatform",
+    "site_url": "http://localhost:9000"
+  }
+}

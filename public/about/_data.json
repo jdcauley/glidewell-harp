@@ -1,0 +1,26 @@
+[
+  {
+    "title": "About",
+		"file": "_about",
+		"menu": "About",
+		"classname": "about"
+  },
+  {
+    "title": "About the Sponsor",
+    "file": "_sponsor",
+		"menu": "Sponsor",
+		"classname": "sponsor"
+  },
+	{
+    "title": "Details, Rules & FAQ",
+    "file": "_details",
+		"menu": "Details",
+		"classname": "details"
+  },
+	{
+    "title": "Meet The Judges",
+    "file": "_judges",
+		"menu": "Judges",
+		"classname": "judges"
+  }
+]

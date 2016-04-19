@@ -1,0 +1,204 @@
+
+$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+// $font-family-matchbook: "matchbook", Georgia, serif;
+
+$border-radius-base:        0 !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;
+
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+$brand-white: #ffffff;
+$brand-light-blue: #2E60AD;
+$brand-blue: #083958;
+$brand-red: #A01A29;
+$brand-primary: $brand-blue;
+
+.brand-logo{
+	display: block;
+	height: auto;
+	width: 300px;
+	padding: 10px 0;
+	margin-left: auto;
+	margin-right: auto;
+	img{
+		height: auto;
+		width: 100%;
+	}
+}
+
+.nav-primary{
+	@extend .navbar;
+	@extend .navbar-default;
+	position: relative;
+	min-height: 0;
+	margin-top: 20px;
+	margin-bottom: 0;
+	background-color: $brand-blue;
+	border: none;
+	border-radius: 0;
+	z-index: 1000;
+	.navbar{
+		border-radius: none;
+		min-height: 0;
+	}
+	.nav-primary-list{
+		>li{
+			a{
+				font-size: 20px;
+				text-transform: uppercase;
+				color: $brand-white;
+				&:hover{
+					color: darken($brand-white, 10%);
+				}
+				&:active{
+					color: darken($brand-white, 10%);
+				}
+				&:focus{
+					color: darken($brand-white, 10%);
+				}
+				@media (min-width: $screen-sm-min) {
+					padding: 15px 20px;
+					.caret{
+						display: none;
+					}
+				}
+			}
+			&.active{
+				>a{
+					color: $brand-white;
+					background-color: #666;
+				}
+			}
+		}
+
+	}
+	.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+	}
+	.dropdown:hover .dropdown-menu {
+    display: block;
+	}
+}
+
+
+@media (min-width: 768px){
+	.navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+	}
+}
+
+
+
+.home-hero{
+	position: relative;
+	min-height: 500px;
+	width: 100%;
+	background: url(../images/jefferson.jpeg) center center no-repeat;
+	background-size: 100%;
+	&:after{
+		-webkit-transition-property: opacity;
+		transition-property: opacity;
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 50%;
+		bottom: 0;
+		left: 0;
+		opacity: 1;
+		pointer-events: none;
+		background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	}
+}
+.hero-container{
+	position: relative;
+	min-height: 500px;
+}
+
+.hero{
+	&.left-box{
+		box-sizing: border-box;
+		position: absolute;
+		height: 100%;
+		width: 30%;
+		padding: 60px 20px 20px;
+		left: 0;
+		top: 0;
+		color: $brand-blue;
+		background-color: fade-out($brand-blue, .7);
+		// z-index: 100;
+	}
+	&.right-box-top{
+		position: absolute;
+		height: 30%;
+		width: 70%;
+		left: 30%;
+		top: 0;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#083958+0,ffffff+100 */
+		// background: transparent; /* Old browsers */
+		// background: -moz-linear-gradient(top,  fade-out($brand-blue, .6) 0%, transparent 100%); /* FF3.6-15 */
+		// background: -webkit-linear-gradient(top,  fade-out($brand-blue, .6) 0%,transparent 100%); /* Chrome10-25,Safari5.1-6 */
+		// background: linear-gradient(to bottom,  fade-out($brand-blue, .6) 0%,transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade-out($brand-blue, .6)', endColorstr='transparent',GradientType=0 ); /* IE6-9 */
+
+	}
+	&.right-box-bottom{
+		position: absolute;
+		height: 70%;
+		width: 70%;
+		left: 30%;
+		bottom: 0;
+		z-index: 100;
+	}
+}
+.form-content{
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 60%;
+	p{
+		padding-right: 20px;
+	}
+}
+.hero-form{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+}
+
+.hero-form-group{
+	margin: 0 0 10px;
+}
+.hero-input{
+	font-size: 14px;
+	padding: 10px;
+	color: $brand-blue;
+	background: transparent;
+	border: 3px solid fade-out($brand-blue, .6);
+	&::placeholder{
+		color: fade-out($brand-blue, .3);
+	}
+	&:focus{
+		outline: -webkit-focus-ring-color auto 0;
+		border: 3px solid fade-out($brand-blue, .1);
+	}
+	&.first-name{
+		width: 49%;
+	}
+	&.last-name{
+		width: 49%;
+		float: right;
+	}
+	&.email{
+		width: 100%;
+	}
+}
+.btn-hero-primary{
+	width: 100%;
+}

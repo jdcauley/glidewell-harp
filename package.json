@@ -1,0 +1,16 @@
+{
+  "name": "glidewell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "harp compile",
+    "deploy": "harp compile && surge ./www glidewell.surge.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}
