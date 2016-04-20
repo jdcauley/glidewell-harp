@@ -95,7 +95,7 @@ $brand-primary: $brand-blue;
 
 .home-hero{
 	position: relative;
-	min-height: 500px;
+	min-height: 550px;
 	width: 100%;
 	background: url(../images/jefferson.jpeg) center center no-repeat;
 	background-size: 100%;
@@ -122,20 +122,26 @@ $brand-primary: $brand-blue;
 
 .hero{
 	&.left-box{
-		box-sizing: border-box;
+		display: block;
 		position: absolute;
 		height: 100%;
 		width: 30%;
-		padding: 60px 20px 20px;
+		padding: 140px 20px 20px;
 		left: 0;
 		top: 0;
 		color: $brand-blue;
 		background-color: fade-out($brand-blue, .7);
+		p{
+			font-family: $font-family-serif;
+			font-style: italic;
+			font-size: 22px;
+			color: $brand-white;
+		}
 		// z-index: 100;
 	}
 	&.right-box-top{
 		position: absolute;
-		height: 30%;
+		height: 70%;
 		width: 70%;
 		left: 30%;
 		top: 0;
@@ -149,16 +155,24 @@ $brand-primary: $brand-blue;
 	}
 	&.right-box-bottom{
 		position: absolute;
-		height: 70%;
+		height: 30%;
 		width: 70%;
 		left: 30%;
 		bottom: 0;
 		z-index: 100;
+		background-color: fade-out($brand-red, .3);
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#083958+0,ffffff+100 */
+		background: transparent; /* Old browsers */
+		background: -moz-linear-gradient(top,  fade-out($brand-red, .6) 0%, transparent 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  fade-out($brand-red, .6) 0%,transparent 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  fade-out($brand-red, .6) 0%,transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='fade-out($brand-red, .6)', endColorstr='transparent',GradientType=0 ); /* IE6-9 */
+
 	}
 }
 .form-content{
 	position: absolute;
-	top: 0;
+	bottom: 20px;
 	left: 20px;
 	width: 60%;
 	p{
@@ -167,7 +181,7 @@ $brand-primary: $brand-blue;
 }
 .hero-form{
 	position: absolute;
-	top: 0;
+	bottom: 20px;
 	right: 0;
 	width: 40%;
 }
@@ -201,4 +215,79 @@ $brand-primary: $brand-blue;
 }
 .btn-hero-primary{
 	width: 100%;
+	background-color: fade-out($brand-blue, .3);
+}
+
+.donation-widget{
+	position: absolute;
+	padding: 20px;
+	width: 100%;
+	color: $brand-white;
+	z-index: 100;
+	h4{
+		display: inline-block;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.btn-group{
+		position: relative;
+		float: right;
+		@extend .clearfix;
+	}
+	.btn-donate{
+		display: inline-block;
+		padding: 12px 18px;
+		margin-right: 12px;
+		font-size: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $brand-white;
+		border: 1px solid $brand-white;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+		&:focus{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+		&:active{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+	}
+}
+.home-content{
+	margin: 40px 0;
+}
+.news-item{
+	margin-bottom: 25px;
+	h5{
+		height: auto;
+		width: 100%;
+		padding-bottom: 3px;
+		font-family: $font-family-serif;
+		color: $brand-light-blue;
+		font-size: 18px;
+		border-bottom: 2px solid $brand-light-blue;
+	}
+	time{
+		display: block;
+		color: $brand-red;
+		margin-bottom: 10px;
+	}
+}
+
+.img-pete{
+	display: none;
+	position: relative;
+	height: auto;
+	width: 50%;
+	float: right;
+	z-index: 100;
 }
