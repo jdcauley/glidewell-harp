@@ -218,6 +218,84 @@ $brand-primary: $brand-blue;
 	background-color: fade-out($brand-blue, .3);
 }
 
+.block-donation-widget{
+	padding: 20px;
+	width: 100%;
+	height:120px;
+	color: $brand-white;
+	z-index: 100;
+	h4{
+		display: inline;
+		position: absolute;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.btn-group{
+		position: absolute;
+		margin-top: 35px;
+		@extend .clearfix;
+	}
+	.btn-donate{
+		display: inline-block;
+		padding: 12px 18px;
+		margin-right: 12px;
+		font-size: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $brand-white;
+		border: 1px solid $brand-white;
+		&:last-child{
+			margin-right: 0;
+			background-color: $brand-red;
+			&:hover{
+				background-color: #904750;
+			}
+		}
+		&:hover{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+		&:focus{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+		&:active{
+			background-color: $brand-red;
+			text-decoration: none;
+		}
+	}
+}
+
+.span-container {
+	background: $brand-blue;
+  height: 120px;
+}
+
+.home-content{
+	margin: 40px 0;
+}
+.news-item{
+	margin-bottom: 25px;
+	h5{
+		height: auto;
+		width: 100%;
+		padding-bottom: 3px;
+		font-family: $font-family-serif;
+		color: $brand-light-blue;
+		font-size: 18px;
+		border-bottom: 2px solid $brand-light-blue;
+	}
+	time{
+		display: block;
+		color: $brand-red;
+		margin-bottom: 10px;
+	}
+}
+
+
+
 .donation-widget{
 	position: absolute;
 	padding: 20px;
@@ -267,6 +345,10 @@ $brand-primary: $brand-blue;
 	}
 }
 
+.span-container {
+	background: $brand-blue;
+  height: 120px;
+}
 
 .home-content{
 	margin: 40px 0;
